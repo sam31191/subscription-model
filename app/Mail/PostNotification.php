@@ -2,23 +2,26 @@
 
 namespace App\Mail;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Bus\Queueable;
+use App\Post;
 
 class PostNotification extends Mailable
 {
     use Queueable, SerializesModels;
 
+    protected $post;
+    
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Post $post)
     {
-        //
+        $this->post = $post;
     }
 
     /**
@@ -28,6 +31,6 @@ class PostNotification extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->view('post.blade.php', ['post' => $this->post]);
     }
 }
