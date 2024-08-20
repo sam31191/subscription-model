@@ -21,3 +21,11 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'post'], function () {
     Route::post('/{website_id}/store', 'PostController@store');
 });
+
+Route::group(['prefix' => 'subscriber'], function () {
+    Route::post('/{website_id}/subscribe', 'SubscriberController@subscribe');
+});
+
+Route::group(['prefix' => 'website'], function () {
+    Route::post('/create', 'WebsiteController@create');
+});
