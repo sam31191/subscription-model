@@ -8,9 +8,8 @@ To get started with the project, please follow these steps:
 
 1. Clone the repository to your local machine.
 2. Run `composer install` to install the dependencies.
-3. Run `npm install` to install the frontend dependencies.
-4. Run `php artisan key:generate` to generate the application key.
-5. Run `php artisan migrate` to run the database migrations.
+3. Run `php artisan key:generate` to generate the application key.
+4. Run `php artisan migrate` to run the database migrations.
 
 ## Configuration
 
@@ -26,14 +25,6 @@ To run the application, please use the following command:
 `php artisan serve`
 
 This will start the development server, and you can access the application at `http://localhost:8000`.
-
-## Testing
-
-To run the tests, please use the following command:
-
-`phpunit`
-
-This will run the unit tests and integration tests for the application.
 
 ## Contributing
 
