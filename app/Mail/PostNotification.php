@@ -31,6 +31,6 @@ class PostNotification extends Mailable
      */
     public function build()
     {
-        return $this->view('post.blade.php', ['post' => $this->post]);
+        return $this->view('post', ['post' => $this->post]);
     }
 }
